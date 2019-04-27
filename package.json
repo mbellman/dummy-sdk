@@ -15,16 +15,22 @@
   "homepage": "https://github.com/mbellman/dummy-sdk#readme",
   "dependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
+    "enzyme": "^3.9.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "jest": "^24.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.2",
     "redux": "^4.0.1",
-    "webpack": "^4.30.0"
+    "webpack": "^4.30.0",
+    "yargs": "^13.2.2"
   },
   "bin": {
-    "sdk-build": "bin/build.js"
+    "sdk-build": "bin/build.js",
+    "sdk-test": "bin/test.js"
   }
 }
