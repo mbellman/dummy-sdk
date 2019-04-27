@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "An experiment for centralizing app development tools.",
   "main": "index.js",
-  "scripts": {
-    "build:dev": "node ./scripts/build.js dev",
-    "build:prod": "node ./scripts/build.js prod"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mbellman/dummy-sdk.git"
@@ -29,5 +25,8 @@
   },
   "devDependencies": {
     "friendly-errors-webpack-plugin": "^1.7.0"
+  },
+  "bin": {
+    "sdk-build": "bin/build.js"
   }
 }
