@@ -3,5 +3,8 @@ module.exports = {
 	collectCoverage: true,
 	collectCoverageFrom: [
 		'./src/**/*.{js,jsx}'
+	],
+	setupFilesAfterEnv: [
+		'dummy-sdk/setupTests'
 	]
 };
