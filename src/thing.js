@@ -23,8 +23,12 @@ class Hello {
 	method() {}
 }
 
-export default () => {
+export default async () => {
 	const hello = new Hello();
+
+	await new Promise((res, rej) => {
+		setTimeout(() => res(), 2000);
+	});
 
 	hello.sayHello();
 };

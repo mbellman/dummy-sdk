@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const babelConfig = require('../babel.config');
 
@@ -13,6 +14,9 @@ module.exports = {
 	plugins: [
 		new FriendlyErrorsWebpackPlugin({
 			clearConsole: false
+		}),
+		new webpack.ProvidePlugin({
+			Promise: ['es6-promise', 'Promise']
 		})
 	],
 	module: {
