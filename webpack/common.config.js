@@ -1,29 +1,19 @@
 const path = require('path');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
-const PROJECT_ROOT = path.resolve('./');
-
-module.exports = ({
-	mode = 'production',
-	devtool = 'none',
-	filename = 'bundle.[contenthash].js'
-} = {}) => ({
-	mode,
-	devtool,
-	entry: path.resolve(PROJECT_ROOT, './src/index.js'),
+module.exports = {
+	devtool: 'none',
+	entry: {
+		app: [path.resolve(process.cwd(), './src/index.js')]
+	},
 	output: {
-		filename,
-		publicPath: '/dist'
+		path: path.resolve(process.cwd(), './dist')
 	},
 	plugins: [
 		new FriendlyErrorsWebpackPlugin({
 			clearConsole: false
 		})
 	],
-	externals: {
-		react: 'React',
-		'react-dom': 'ReactDOM'
-	},
 	module: {
 		rules: [
 			{
@@ -41,4 +31,4 @@ module.exports = ({
 	resolve: {
 		extensions: ['.js', '.jsx']
 	}
-});
+};
