@@ -1,23 +1,15 @@
 #! /usr/bin/env node
 
 const jest = require('jest');
-const baseConfig = require('../jest.config');
-const args = require('yargs').argv;
 
-function getConfig() {
-	return {
-		...baseConfig,
-		verbose: args.verbose || args.v,
-		testRegex: `${args.match || args.m || ''}.*\.test\.js$`
-	};
+function getDefaultArgs() {
+	return '--config jest.config.js';
 }
 
-function main() {
-	if (args.updateSnapshot || args.u) {
-		jest.run('./tests/ -u');
-	} else {
-		jest.runCLI(getConfig(), [process.cwd()]);
-	}
+function main(args) {
+	const [ process, file, ...jestArgs ] = args;
+
+	jest.run([getDefaultArgs(), ...jestArgs].join(' '));
 }
 
-main();
+main(process.argv);
