@@ -6,5 +6,11 @@ module.exports = {
 	],
 	setupFilesAfterEnv: [
 		'dummy-sdk/setupTests'
+	],
+	transform: {
+		"^.+\\.jsx?$": "babel-jest"
+	},
+	transformIgnorePatterns: [
+		'node_modules\/(?!.*dummy-sdk)'
 	]
 };
