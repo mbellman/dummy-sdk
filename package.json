@@ -15,8 +15,13 @@
   "homepage": "https://github.com/mbellman/dummy-sdk#readme",
   "dependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
     "enzyme": "^3.9.0",
@@ -33,9 +38,6 @@
     "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^4.2.1",
     "yargs": "^13.2.2"
-  },
-  "scripts": {
-    "demo": "node ./bin/run.js"
   },
   "bin": {
     "sdk-build": "bin/build.js",

@@ -1,5 +1,6 @@
 const path = require('path');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const babelConfig = require('../babel.config');
 
 module.exports = {
 	devtool: 'none',
@@ -22,7 +23,7 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-env', '@babel/preset-react']
+						...babelConfig
 					}
 				}
 			}
