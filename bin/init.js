@@ -11,11 +11,7 @@ const Paths = {
 const Content = {
   [Paths.BABEL_CONFIG]: `module.exports = require('dummy-sdk/babel.config');`,
   [Paths.JEST_CONFIG]: `module.exports = require('dummy-sdk/jest.config');`,
-  [Paths.ESLINTRC]: `
-{
-  "extends": ["./node_modules/dummy-sdk/.eslintrc"]
-}
-  `
+  [Paths.ESLINTRC]: `{ "extends": ["./node_modules/dummy-sdk/.eslintrc"] }`
 };
 
 function initializeFile(path) {
