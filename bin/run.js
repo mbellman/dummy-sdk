@@ -10,7 +10,7 @@ const webpackCompiler = webpack(webpackConfig);
 const server = new WebpackDevServer(webpackCompiler, webpackConfig.devServer);
 
 server.listen(3000, 'localhost', () => {
-	webpackCompiler.hooks.done.tap('done', () => {
-		setTimeout(() => console.log('\nServing app at: http://localhost:3000'), 100);
-	});
+  webpackCompiler.hooks.done.tap('done', () => {
+    setTimeout(() => console.log('\nServing app at: http://localhost:3000'), 100);
+  });
 });

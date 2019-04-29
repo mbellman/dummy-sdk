@@ -27,6 +27,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "es6-promise": "^4.2.6",
+    "eslint": "^5.16.0",
     "express": "^4.16.4",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
@@ -41,6 +42,7 @@
     "yargs": "^13.2.2"
   },
   "bin": {
+    "sdk-init": "bin/init.js",
     "sdk-build": "bin/build.js",
     "sdk-run": "bin/run.js",
     "sdk-test": "bin/test.js"
